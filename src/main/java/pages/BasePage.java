@@ -15,13 +15,13 @@ public class BasePage {
     @BeforeClass
     public void setUp() {
         System.setProperty("web-driver.chrome.driver",
-                "Z:\\QA\\Chromadriver\\chromedriver.exe\\");
+                "Z:\\QA\\Chromedriver\\chromedriver.exe\\");
         driver = new ChromeDriver();
         driver.get(baseUrl);
     }
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
-    }
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
 }
 
