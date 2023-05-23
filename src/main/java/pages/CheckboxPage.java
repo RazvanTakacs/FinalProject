@@ -9,7 +9,7 @@ public class CheckboxPage extends BasePage{
     }
 
     By SingleCheckbox = By.id("isAgeSelected");
-    By CheckboxOption1 = By.id("x1-check1");
+    By CheckboxOption1 = By.xpath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[1]/input");
     By CheckboxOption2 = By.id("ex1-check2");
     By CheckboxOption3 = By.xpath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[3]/input");
     By CheckboxOption4 = By.xpath("/html/body/div[1]/div[1]/section[3]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[4]/input");
@@ -23,4 +23,10 @@ public class CheckboxPage extends BasePage{
     public void clickOnCheckboxOption4(){ driver.findElement(CheckboxOption4).click();}
     public void clickOnCheckUncheckAllButton(){ driver.findElement(CheckUncheckAllButton).click();}
     public String getYourDisplayedMessage(){ return driver.findElement(DisplayedMessage).getText();}
+    public String getYourInitialValue(){ return driver.findElement(CheckUncheckAllButton).getAttribute("value");}
+    public String getYourNewValue(){ return driver.findElement(CheckUncheckAllButton).getAttribute("value");}
+    public boolean isCheckboxOption1Selected() { return driver.findElement(CheckboxOption1).isSelected();}
+    public boolean isCheckboxOption2Selected() { return driver.findElement(CheckboxOption2).isSelected();}
+    public boolean isCheckboxOption3Selected() { return driver.findElement(CheckboxOption3).isSelected();}
+    public boolean isCheckboxOption4Selected() { return driver.findElement(CheckboxOption4).isSelected();}
 }
