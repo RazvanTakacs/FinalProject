@@ -47,7 +47,7 @@ public class SimpleFormTestCases extends BasePage {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.clickOnGetValuesButton();
         String actualSum = simpleFormPage.getYourDisplayedSum();
-        Assert.assertEquals(actualSum, "NaN");
+        Assert.assertEquals(actualSum, "Entered value is not a number");
     }
 
     @Test (priority = 5)
@@ -56,7 +56,7 @@ public class SimpleFormTestCases extends BasePage {
         simpleFormPage.selectTextFieldForA("5");
         simpleFormPage.clickOnGetValuesButton();
         String actualSum = simpleFormPage.getYourDisplayedSum();
-        Assert.assertEquals(actualSum, "NaN");
+        Assert.assertEquals(actualSum, "Entered value is not a number");
     }
 
     @Test (priority = 6)
@@ -65,7 +65,7 @@ public class SimpleFormTestCases extends BasePage {
         simpleFormPage.selectTextFieldForB("5");
         simpleFormPage.clickOnGetValuesButton();
         String actualSum = simpleFormPage.getYourDisplayedSum();
-        Assert.assertEquals(actualSum, "NaN");
+        Assert.assertEquals(actualSum, "Entered value is not a number");
     }
 
     @Test (priority = 7)

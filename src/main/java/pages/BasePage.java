@@ -11,6 +11,7 @@ public class BasePage {
     }
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        driver.manage().window().maximize();
     }
     @BeforeClass
     public void setUp() {

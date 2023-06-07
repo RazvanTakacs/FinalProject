@@ -19,22 +19,22 @@ public class CheckboxTestCases extends BasePage {
     }
 
 
-    @Test
+    @Test (priority = 1)
     public void clickOnTheSingleCheckbox() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnSingleCheckbox();
         String actualMessage = checkboxPage.getYourDisplayedMessage();
-        Assert.assertEquals(actualMessage, "Success - Check box is checked");
+        Assert.assertEquals(actualMessage, "Checked");
     }
 
-    @Test
+    @Test (priority = 2)
     public void testIfTheCheckboxIsToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnSingleCheckbox();
         Assert.assertTrue(checkboxPage.isSingleCheckboxSelected());
     }
 
-    @Test
+    @Test (priority = 3)
     public void clickOnTheCheckAllButtonToTestIfTheValueChanges() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         String initialValue = checkboxPage.getYourInitialValue();
@@ -43,7 +43,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertNotEquals(newValue, initialValue);
     }
 
-    @Test
+    @Test (priority = 4)
     public void clickOnTheCheckAllButtonToTestIfAllCheckboxesAreToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckUncheckAllButton();
@@ -53,7 +53,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertTrue(checkboxPage.isCheckboxOption4Selected());
     }
 
-    @Test
+    @Test (priority = 5)
     public void clickOnTheUncheckAllButtonToTestIfAllCheckboxesAreUnToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckUncheckAllButton();
@@ -64,7 +64,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertFalse(checkboxPage.isCheckboxOption4Selected());
     }
 
-    @Test
+    @Test (priority = 6)
     public void clickOnEachCheckboxToTestIfTheyAreToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckboxOption1();
@@ -77,7 +77,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertTrue(checkboxPage.isCheckboxOption4Selected());
     }
 
-    @Test
+    @Test (priority = 7)
     public void clickOnEachToggledCheckboxToTestIfTheyAreUnToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckUncheckAllButton();
@@ -91,7 +91,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertFalse(checkboxPage.isCheckboxOption4Selected());
     }
 
-    @Test
+    @Test (priority = 8)
     public void toggleTwoOptionsAndClickOnCheckAllButtonToTestIfAllOptionsAreToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckboxOption1();
@@ -105,7 +105,7 @@ public class CheckboxTestCases extends BasePage {
         Assert.assertTrue(checkboxPage.isCheckboxOption4Selected());
     }
 
-    @Test
+    @Test (priority = 9)
     public void unToggleTwoOptionsAndClickOnUncheckAllButtonToTestIfAllOptionsAreUnToggled() throws InterruptedException {
         driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/div[1]/ul/li[2]/a")).click();
         checkboxPage.clickOnCheckUncheckAllButton();

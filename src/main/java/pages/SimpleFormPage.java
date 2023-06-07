@@ -16,7 +16,6 @@ public class SimpleFormPage extends BasePage {
     By TwoInputFieldsEnterB = By.id("sum2");
     By GetValuesButton = By.xpath("//*[@id=\"gettotal\"]/button");
     By SumOfTheTwoNumbers = By.id("addmessage");
-
     public void selectTextField(String arg1) {
         driver.findElement(TextField).sendKeys(arg1);
     }
@@ -26,6 +25,7 @@ public class SimpleFormPage extends BasePage {
     public void clickOnGetValuesButton(){driver.findElement(GetValuesButton).click();}
     public String getYourDisplayedMessage(){ return driver.findElement(YourMessage).getText(); }
     public String getYourDisplayedSum(){ return driver.findElement(SumOfTheTwoNumbers).getText();}
+
 }
 
 
