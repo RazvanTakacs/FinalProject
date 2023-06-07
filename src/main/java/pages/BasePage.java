@@ -20,9 +20,9 @@ public class BasePage {
         driver = new ChromeDriver();
         driver.get(baseUrl);
     }
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
+    }
 }
 
