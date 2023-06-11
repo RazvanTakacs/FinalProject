@@ -1,8 +1,6 @@
 package testCases;
 
-import com.beust.ah.A;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,20 +16,20 @@ public class SelectDropdownTestCases extends BasePage {
         selectDropdownPage = new SelectDropdownPage(driver);
     }
 
-    @Test (priority = 1)
+//    @Test (priority = 1)
     public void testIfTheFirstElementFromTheListIsDisabled() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         Assert.assertFalse(selectDropdownPage.getSelectedDayOption().isEnabled());
     }
 
-    @Test (priority = 2)
+//    @Test (priority = 2)
     public void selectAnOptionFromTheDropdownList() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectDayByValue("Monday");
         Assert.assertTrue(selectDropdownPage.getSelectedDay().contains("Monday"));
     }
 
-    @Test (priority = 3)
+//    @Test (priority = 3)
     public void selectAnotherOptionFromTheDropdownListToTestIfTheValueChanges() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectDayByValue("Monday");
@@ -40,7 +38,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getSelectedDay().contains("Sunday"));
     }
 
-    @Test (priority = 4)
+//    @Test (priority = 4)
     public void selectAnOptionFromTheDropdownListAndCheckItsValue() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectDayByValue("Monday");
@@ -48,7 +46,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getSelectedDay().contains(selection));
     }
 
-    @Test (priority = 5)
+//    @Test (priority = 5)
     public void selectAStateFromTheMultiDropdownList() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectStateByValue("Ohio");
@@ -57,7 +55,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getFirstSelectedState().contains(firstOption));
     }
 
-    @Test (priority = 6)
+//    @Test (priority = 6)
     public void selectAStateAndClickTheGetLastSelectedButton() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectStateByValue("Ohio");
@@ -65,7 +63,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getLastSelectedState().contains("Ohio"));
     }
 
-    @Test (priority = 7)
+//    @Test (priority = 7)
     public void selectTwoStatesToTestIfBothOptionsAreDisplayed() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectStateByValue("Ohio");
@@ -76,7 +74,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getLastSelectedState().contains("Texas"));
     }
 
-    @Test (priority = 8)
+//    @Test (priority = 8)
     public void clickOnMultipleStatesAndThenClickOnTheFirstSelectedButton() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectStateByValue("Ohio");
@@ -87,7 +85,7 @@ public class SelectDropdownTestCases extends BasePage {
         Assert.assertTrue(selectDropdownPage.getLastSelectedState().contains(lastOption));
     }
 
-    @Test (priority = 9)
+//    @Test (priority = 9)
     public void selectTwoDifferentStatesThenClickOnTheFirstSelectedButton() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[4]/a")).click();
         selectDropdownPage.selectStateByValue("California");

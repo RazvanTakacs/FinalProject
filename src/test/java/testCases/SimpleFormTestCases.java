@@ -1,6 +1,5 @@
 package testCases;
 
-import com.beust.ah.A;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -18,14 +17,14 @@ public class SimpleFormTestCases extends BasePage {
         simpleFormPage = new SimpleFormPage(driver);
     }
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     public void testIfTheInputFieldAcceptsText() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.selectTextField("Test");
         Assert.assertTrue(driver.getPageSource().contains("Test"));
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     public void doNotWriteTextThenClickOnTheCheckedValueButton() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"__next\"]/div/section[2]/div/div/div[1]/div[1]/ul/li[1]/a")).click();
         simpleFormPage.clickOnGetCheckedValue();
@@ -85,7 +84,7 @@ public class SimpleFormTestCases extends BasePage {
         simpleFormPage.selectTextFieldForB("Test");
         simpleFormPage.clickOnGetValuesButton();
         String actualSum = simpleFormPage.getYourDisplayedSum();
-        Assert.assertEquals(actualSum,"NaN");
+        Assert.assertEquals(actualSum,"Entered value is not a number");
     }
 }
 

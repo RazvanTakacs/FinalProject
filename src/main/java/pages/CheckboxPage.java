@@ -11,8 +11,9 @@ public class CheckboxPage extends BasePage{
     By SingleCheckbox = By.id("isAgeSelected");
     By CheckboxOption1 = By.id("ex1-check1");
     By CheckboxOption2 = By.id("ex1-check2");
-    By CheckboxOption3 = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[2]/div/div[2]/div[3]/input");
-    By CheckboxOption4 = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div[2]/div/div[2]/div[4]/input");
+
+    By CheckboxOption3 = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/div[2]/div[1]/div[3]/input");
+    By CheckboxOption4 = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/div[2]/div[1]/div[4]/input");
     By CheckUncheckAllButton = By.id("box");
     By DisplayedMessage = By.id("txtAge");
     public boolean isSingleCheckboxSelected(){ return driver.findElement(SingleCheckbox).isSelected();}

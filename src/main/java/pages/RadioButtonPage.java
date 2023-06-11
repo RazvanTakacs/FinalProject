@@ -18,9 +18,9 @@ public class RadioButtonPage extends BasePage {
     By AgeGroupZeroToFive = By.cssSelector("input[type='radio'][value='0 - 5'][name='ageGroup']");
     By AgeGroupFiveToFifteen = By.cssSelector("input[type='radio'][value='5 - 15'][name='ageGroup']");
     By AgeGroupFifteenToFifty = By.cssSelector("input[type='radio'][value='15 - 50'][name='ageGroup']");
-    By GetValues = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div[1]/button");
-    By YourGender = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div[2]/p[1]");
-    By YourAgeGroup = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[2]/div/div/div[2]/p[2]");
+    By GetValues = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/div/div/div[1]/button");
+    By YourGender = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/div/div/div[2]/p[1]/span");
+    By YourAgeGroup = By.xpath("/html/body/div[1]/div/section[2]/div/div/div/div[3]/div/div/div[2]/p[2]/span");
     public void clickOnMaleRadioButton(){ driver.findElement(MaleRadioButton).click();}
     public void clickOnFemaleRadioButton(){ driver.findElement(FemaleRadioButton).click();}
     public void clickOnGetValueButton(){ driver.findElement(GetCheckedValue).click();}

@@ -1,12 +1,10 @@
 package testCases;
 
-import com.beust.ah.A;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
-import pages.CheckboxPage;
 import pages.RadioButtonPage;
 
 public class RadioButtonTestCases extends BasePage {
@@ -65,7 +63,7 @@ public class RadioButtonTestCases extends BasePage {
         radioButtonPage.clickOnGroupMaleRadioButton();
         radioButtonPage.clickOnTheGetValuesButton();
         String actualGender = radioButtonPage.getYourGender();
-        Assert.assertEquals(actualGender,"Gender : Male");
+        Assert.assertEquals(actualGender,"Male");
     }
 
     @Test (priority = 7)
@@ -74,11 +72,11 @@ public class RadioButtonTestCases extends BasePage {
         radioButtonPage.clickOnGroupMaleRadioButton();
         radioButtonPage.clickOnTheGetValuesButton();
         String actualGender = radioButtonPage.getYourGender();
-        Assert.assertEquals(actualGender,"Gender : Male");
+        Assert.assertEquals(actualGender,"Male");
         radioButtonPage.clickOnGroupFemaleRadioButton();
         radioButtonPage.clickOnTheGetValuesButton();
         String newActualGender = radioButtonPage.getYourGender();
-        Assert.assertEquals(newActualGender,"Gender : Female");
+        Assert.assertEquals(newActualGender,"Female");
     }
 
     @Test (priority = 8)
@@ -88,8 +86,8 @@ public class RadioButtonTestCases extends BasePage {
         radioButtonPage.clickOnAgeGroupZeroToFive();
         radioButtonPage.clickOnTheGetValuesButton();
         String Gender = radioButtonPage.getYourGender();
-        Assert.assertEquals(Gender,"Gender : Other");
+        Assert.assertEquals(Gender,"Other");
         String AgeGroup = radioButtonPage.getYourAgeGroup();
-        Assert.assertEquals(AgeGroup,"Age : 0 - 5");
+        Assert.assertEquals(AgeGroup,"0 - 5");
     }
 }
